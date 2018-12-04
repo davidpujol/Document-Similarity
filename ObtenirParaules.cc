@@ -28,7 +28,7 @@ vector < vector<string> > getMatrixParaules(int numDocuments) {
 	 while (getline(file, str)) if(str.size() > 0) cjtParaules.push_back(str);
 	 return cjtParaules;
  }
- string llegirDocumentString(i) {
+ string llegirDocumentString(int i) {
      ifstream file;
 	 file.open("fitxer"+to_string(i)+".txt");
 	 string res = "";
