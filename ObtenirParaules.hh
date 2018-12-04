@@ -7,4 +7,7 @@ vector < vector<string> > getMatrixParaules(int n);
 //totes les paraules d'un document i
 vector <string> llegirDocument(int i);
 
+//string amb totes les paraules del document i
+string llegirDocumentString(i);
+
 #endif
