@@ -32,6 +32,6 @@ vector < vector<string> > getMatrixParaules(int numDocuments) {
 	 file.open("fitxer"+to_string(i)+".txt");
 	 string res = "";
      string str;
-	 while (getline(file, str)) if(str.size() > 0) res += str;
+	 while (getline(file, str)) if(str.size() > 0) res += " " + str;
 	 return res;
  }
