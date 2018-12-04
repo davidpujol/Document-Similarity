@@ -6,9 +6,9 @@
 #include <cstdlib> 
 using namespace std;
 
-vector < vector<string> > getMatrixParaules() {
+vector < vector<string> > getMatrixParaules(int numDocuments) {
 	vector < vector<string> > cjtParDoc;
-	for (int i=0; i < 20; ++i) {
+	for (int i=0; i < numDocuments; ++i) {
 		string nom = "fitxer" + to_string(i+1) + ".txt";
 		ifstream file;
 		file.open(nom);
@@ -27,7 +27,7 @@ vector < vector<string> > getMatrixParaules() {
 	 while (getline(file, str)) if(str.size() > 0) cjtParaules.push_back(str);
 	 return cjtParaules;
  }
- string llegirDocumentString(int i) {
+ string llegirDocumentString(i) {
      ifstream file;
 	 file.open("fitxer"+to_string(i)+".txt");
 	 string res = "";
