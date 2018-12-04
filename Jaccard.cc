@@ -21,9 +21,3 @@ double jaccard_index(set<string> s1, set<string> s2){
 double jaccard_distance(set<string> s1, set<string> s2){
 	return 1 - jaccard_index(s1,s2);
 }
-
-int main () {
-	set<string> s1 = {"Sheldon", "Leonard", "Raj", "Howard","Penny"};
-	set<string> s2 = {"Sheldon", "Leonard", "Rash", "Howard","Penny"};
-	cout << jaccard(s1,s2) << endl;
-}

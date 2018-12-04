@@ -1,6 +1,11 @@
 #ifndef OBTENIRPARAULES_HH
 #define OBTENIRPARAULES_HH
 
+#include <vector>
+#include <string>
+
+using namespace std;
+
 //totes les paraules de tots els N documents
 vector < vector<string> > getMatrixParaules(int n);
 
@@ -8,6 +13,6 @@ vector < vector<string> > getMatrixParaules(int n);
 vector <string> llegirDocument(int i);
 
 //string amb totes les paraules del document i
-string llegirDocumentString(i);
+string llegirDocumentString(int i);
 
 #endif

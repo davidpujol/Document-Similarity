@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <cstdlib> 
 #include <ObtenirParaules.hh>
+
 using namespace std;
 
 vector < vector<string> > getMatrixParaules(int numDocuments) {

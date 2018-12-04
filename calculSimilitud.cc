@@ -53,7 +53,7 @@ void calculaTotesKs () {
 }
 
 
-int main() {    //inicial
+void calculSimilitud() {    //inicial
     cout << "Introdueix els dos documents que vols comprar" << endl;
     int ind1, ind2;
     cin >> ind1 >> ind2;
