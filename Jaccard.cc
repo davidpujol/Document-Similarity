@@ -1,5 +1,6 @@
 #include <iostream>
 #include <set>
+#include <Jaccard.hh>
 using namespace std;
 
 
