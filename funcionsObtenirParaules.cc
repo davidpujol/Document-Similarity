@@ -27,3 +27,11 @@ vector < vector<string> > getMatrixParaules() {
 	 while (getline(file, str)) if(str.size() > 0) cjtParaules.push_back(str);
 	 return cjtParaules;
  }
+ string llegirDocumentString(int i) {
+     ifstream file;
+	 file.open("fitxer"+to_string(i)+".txt");
+	 string res = "";
+     string str;
+	 while (getline(file, str)) if(str.size() > 0) res += str;
+	 return res;
+ }
