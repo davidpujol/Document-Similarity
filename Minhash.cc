@@ -1,31 +1,37 @@
 
 #include "ObtenirParaules.hh"
+#include "Minhash.hh"
+#include <vector>
 
 using namespace std;
 
 #define N_DOCS 20
 
-void transposada(vector<vector<int> &mat) {
 
+typedef vector<vector<int>> Matriu;
+
+
+Matriu transposada(const Matriu & mat) {
+    for(int i = 0; i < mat.size(); ++i) {
+		for(int j = 0; j < mat.size();++j);
+    }
 }
 
 void calculSimilitudMinHash() {
 	set<string> shingles;
 	vector<string> v;
 	for(int i = 0; i < N_DOCS; i++) {
-        vector<string> paraules = llegir_document(i);
+        string paraules = llegirDocumentString(i);
         set<string> s = generateKShingles(4, paraules);
         shingles.insert(s.begin(), s.end());
-
-        string cjtParaules = llegir_document(i);
-        v.push(cjtParaules);
+        v.push_back(paraules);
 
     }
 	for (auto const &e: shingles)
 		cout << e << ' ';
 	cout << endl;
 
-	vector<vector<int>> mat = vector<vector<int>>(vector<int>(shingles.size()),N_DOCS);
+	vector<vector<int>> mat = vector< vector<int> >(N_DOCS, vector<int>(shingles.size()));
 	for(int i = 0; i < N_DOCS; ++i) {
 	    mat[i] = calcularColumna(shingles,v[i]);
 	}
