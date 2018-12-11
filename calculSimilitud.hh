@@ -5,7 +5,7 @@
 
 
 #include <iostream>
-#include <set>
+#include <unordered_set>
 #include <string>
 #include <vector>
 #include "calculSimilitud.cc"
@@ -14,7 +14,7 @@ using namespace std;
 
 set<string> generateKShingles (int k, vector<string> paraules);
 
-void calculaTotesKs () ;
+void calculaSimilitudTotesKs () ;
 
 
 void calculSimilitud ();

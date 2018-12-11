@@ -10,7 +10,6 @@ double jaccard_index(set<string> s1, set<string> s2){
 		if(s1.count(s) == 1) interseccio++;
 		else unio++;
 	}
-	cout << interseccio << ", " << unio << endl;
 	return double(interseccio) / double(unio);
 }
 

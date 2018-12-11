@@ -1,6 +1,6 @@
 
 #include "ObtenirParaules.hh"
-
+#include <unordered_set>
 using namespace std;
 
 #define N_DOCS 20
@@ -8,7 +8,7 @@ using namespace std;
 void calculSimilitudMinHash() {
 	set <string> shingles;
 	for(int i = 0; i < N_DOCS; i++) {
-		vector<string> paraules = llegirDocument(i);
+		string paraules = llegirDocumentString(i);
 		set<string> s = generateKShingles(4,paraules);
 		shingles.insert(s.begin(), s.end());
 	}
