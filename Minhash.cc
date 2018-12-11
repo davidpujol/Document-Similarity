@@ -3,8 +3,11 @@
 using namespace std;
 
 #define N_DOCS 20
+#define INF 10000000
 
 typedef vector<vector<int>> Matriu;
+
+int nShingles;
 
 Matriu transposada(const Matriu & mat) {
     int cols = mat.size();
@@ -41,6 +44,7 @@ void calculSimilitudMinHash() {
         shingles.insert(s.begin(), s.end());
         v.push_back(paraules);
     }
+	nShingles = shingles.size();
 	for (auto const &e: shingles)
 		cout << e << ' ';
 	cout << endl;
@@ -52,7 +56,32 @@ void calculSimilitudMinHash() {
 	mat = signaturesMinHash(obtenirVectorA(5,shingles.size())),transposada(mat);
 
 }
+int universalHashing(int a, int x, int b, int m){
+    //h(x) = (ax+b) mod n
+    return (a*x+b)%m;
+}
+
+int funcioHash(int a, int x) {
+    return universalHashing(a, x, 1, nShingles);
+}
 
 Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
+    Matriu sig = Matriu(hash.size(), vector<int>(mat[0].size(),INF));
 
+    for(int i = 0; i < mat.size(); ++i) {
+        vector<int> hi;
+        for (auto h: hash) {
+            hi.push_back(funcioHash(h,i));
+        }
+        for(int j = 0; j < mat[0].size(); ++j) {
+            int c = mat[i][j];
+            if(c == 1) {
+                for(int h = 0; h < hi.size(); ++h) {
+                   if(hi[h] < sig[h][j]) {
+                        sig[h][j] = hi[h];
+                   }
+                }
+            }
+        }
+    }
 }
