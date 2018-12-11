@@ -18,7 +18,8 @@ int main() {
     cin >> i;
 
     if (i == 1) {
-        calculSimilitud();
+        //calculSimilitud();
+        calculaSimilitudTotesKs();
     }
 
     else {
