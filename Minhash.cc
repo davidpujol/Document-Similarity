@@ -5,6 +5,9 @@ using namespace std;
 
 #define N_DOCS 20
 
+#include <set>
+#include <vector>
+
 typedef vector<vector<int>> Matriu;
 
 Matriu transposada(const Matriu & mat) {
@@ -33,25 +36,36 @@ vector <int> calcularColumna(set <string> shingles, string cjtParaules) {
 }
 
 
-void calculSimilitudMinHash() {
+Matriu calculaMinHashMatrix() {
 	set<string> shingles;
-	vector<string> v;
-	for(int i = 0; i < N_DOCS; i++) {
-        string paraules = llegirDocumentString(i);
-        set<string> s = generateKShingles(4, paraules);
-        shingles.insert(s.begin(), s.end());
-        v.push_back(paraules);
-    }
+	vector<string> v;	//un vector en el que anem guardant les strings que representen la totalitat dels documents
+	for (int i = 1; i <= N_DOCS; i++) {
+		string paraules = llegirDocumentString(i);
+		set<string> s = generateKShingles(4, paraules);
+		shingles.insert(s.begin(), s.end());
+		v.push_back(paraules);
+	}
+
 	for (auto const &e: shingles)
 		cout << e << ' ';
 	cout << endl;
 
 	Matriu mat = Matriu(N_DOCS, vector<int>(shingles.size()));
-	for(int i = 0; i < N_DOCS; ++i) {
-	    mat[i] = calcularColumna(shingles,v[i]);
+	for (int i = 0; i < N_DOCS; ++i) {
+		mat[i] = calcularColumna(shingles, v[i]);
 	}
 	mat = transposada(mat);
+	return mat;
+}
 
+void calculaMinHashSimilarity () {
+	cout << "Introdueix els dos documents que vols comprar" << endl;
+	int ind1, ind2;
+	cin >> ind1 >> ind2;
+
+	Matriu m = calculaMinHashMatrix();
+	double similitud = jaccard_from_minHashMatrix(m, ind1, ind2);
+	cout << "La similitud entre els dos documents es: " << similitud << endl;
 }
 
 

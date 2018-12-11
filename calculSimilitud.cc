@@ -15,10 +15,8 @@ set<string> generateKShingles (int k, string t)
         if ((counter + k) <= t.size()) {
             newWord = t.substr(counter, k); //agafem de counter a k-1
         }
-        else   //es la ultima paraula
-            newWord = t.substr (counter);
-            
-        counter += k;
+
+        counter += 1;
         shingles.insert(newWord);
     }
     return shingles;

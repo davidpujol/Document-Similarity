@@ -28,8 +28,7 @@ int main() {
     }
 
     else if (i == 3) {
-
-
+        calculaMinHashSimilarity();
     }
 
 
