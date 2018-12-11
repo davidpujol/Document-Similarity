@@ -1,4 +1,3 @@
-
 #include "ObtenirParaules.hh"
 #include <vector>
 using namespace std;
@@ -9,6 +8,36 @@ using namespace std;
 #include <vector>
 
 typedef vector<vector<int>> Matriu;
+
+
+int randomNumber(int max, int min) {
+	return rand()%(max-min + 1) + min;
+}
+
+bool conteValor(vector<int> v, int x) {
+	for(int i = 0; i<v.size(); ++i) {
+		if(v[i] == x)return true;
+	}
+	return false;
+}
+
+/*
+	INPUT: n= num de funcions que es vol
+	       numSH = num de shingles
+*/
+vector <int> obtenirVectorA(int n, int numSH) {
+	vector <int> res(n, -1);
+	for (int i = 0; i < n; ++i) {
+		bool acabat = false;
+		int x;
+		while (not acabat) {
+			x = randomNumber(numSH, 0);
+			if((x % 2 != 0) && (not conteValor(res, x))) acabat = true;
+		}
+		res[i] = x;
+	}
+}
+
 
 Matriu transposada(const Matriu & mat) {
     int cols = mat.size();
@@ -54,9 +83,7 @@ Matriu calculaMinHashMatrix() {
 	for (int i = 0; i < N_DOCS; ++i) {
 		mat[i] = calcularColumna(shingles, v[i]);
 	}
-	mat = transposada(mat);
-	return mat;
-}
+	mat = signaturesMinHash(obtenirVectorA(5,shingles.size())),transposada(mat);
 
 void calculaMinHashSimilarity () {
 	cout << "Introdueix els dos documents que vols comprar" << endl;
@@ -68,5 +95,6 @@ void calculaMinHashSimilarity () {
 	cout << "La similitud entre els dos documents es: " << similitud << endl;
 }
 
+Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
 
-
+}
