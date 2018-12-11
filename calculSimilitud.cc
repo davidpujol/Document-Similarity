@@ -28,18 +28,12 @@ void calculaSimilitudTotesKs () {
     cout << "Introdueix els dos documents que vols comprar" << endl;
     int ind1, ind2;
     cin >> ind1 >> ind2;
-    cout << ind1 << " " << ind2 << endl;
-    string d1 = llegirDocumentString (ind1);
-    cout << "b"<<endl;
-    string d2 = llegirDocumentString (ind2);
-    cout << "a" << endl;
 
-    for (int k=0; k < 10; ++k) {
-        cout << k << endl;
+    string d1 = llegirDocumentString (ind1);
+    string d2 = llegirDocumentString (ind2);
+    for (int k=1; k < 10; ++k) {
         set<string> d1aux = generateKShingles (k, d1);
-        cout << "b" << endl;
         set<string> d2aux = generateKShingles (k, d2);
-        cout << "hola" << endl;
         double similitud = jaccard_index (d1aux, d2aux);
         cout << "La teva similitud amb la k " << k << " és : " << similitud << endl;
     }
