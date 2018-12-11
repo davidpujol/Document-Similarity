@@ -33,8 +33,6 @@ vector < vector<string> > getMatrixParaules(int numDocuments) {
  string llegirDocumentString(int i) {
      ifstream file;
 	 file.open("./generadorDocuments/fitxer"+to_string(i)+".txt");
-	 if (file.is_open()) cout << "hem pogut obrir el document index" << i << endl;
-	 else cout << "No l'hem pogut obrir" << endl;
 
 	 string res = "";
      string str;
