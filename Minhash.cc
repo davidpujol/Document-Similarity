@@ -49,9 +49,10 @@ void calculSimilitudMinHash() {
 	for(int i = 0; i < N_DOCS; ++i) {
 	    mat[i] = calcularColumna(shingles,v[i]);
 	}
-	mat = transposada(mat);
+	mat = signaturesMinHash(obtenirVectorA(5,shingles.size())),transposada(mat);
 
 }
 
+Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
 
-
+}
