@@ -64,39 +64,6 @@ vector <int> calcularColumna(set <string> shingles, string cjtParaules) {
     return col;
 }
 
-
-Matriu calculaMinHashMatrix() {
-    set<string> shingles;
-    vector<string> v;    //un vector en el que anem guardant les strings que representen la totalitat dels documents
-    for (int i = 1; i <= N_DOCS; i++) {
-        string paraules = llegirDocumentString(i);
-        set<string> s = generateKShingles(4, paraules);
-        shingles.insert(s.begin(), s.end());
-        v.push_back(paraules);
-    }
-	nShingles = shingles.size();
-	for (auto const &e: shingles)
-		cout << e << ' ';
-	cout << endl;
-
-    Matriu mat = Matriu(N_DOCS, vector<int>(shingles.size()));
-    for (int i = 0; i < N_DOCS; ++i) {
-        mat[i] = calcularColumna(shingles, v[i]);
-    }
-    mat = signaturesMinHash(obtenirVectorA(5, shingles.size())), transposada(mat);
-    return mat;
-}
-
-void calculaMinHashSimilarity ()
-{
-	cout << "Introdueix els dos documents que vols comprar" << endl;
-	int ind1, ind2;
-	cin >> ind1 >> ind2;
-
-	Matriu m = calculaMinHashMatrix();
-	double similitud = jaccard_from_minHashMatrix(m, ind1, ind2);
-	cout << "La similitud entre els dos documents es: " << similitud << endl;
-}
 int universalHashing(int a, int x, int b, int m){
     //h(x) = (ax+b) mod n
     return (a*x+b)%m;
@@ -118,11 +85,45 @@ Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
             int c = mat[i][j];
             if(c == 1) {
                 for(int h = 0; h < hi.size(); ++h) {
-                   if(hi[h] < sig[h][j]) {
+                    if(hi[h] < sig[h][j]) {
                         sig[h][j] = hi[h];
-                   }
+                    }
                 }
             }
         }
     }
+    return sig;
+}
+
+Matriu calculaMinHashMatrix() {
+    set<string> shingles;
+    vector<string> v;    //un vector en el que anem guardant les strings que representen la totalitat dels documents
+    for (int i = 1; i <= N_DOCS; i++) {
+        string paraules = llegirDocumentString(i);
+        set<string> s = generateKShingles(4, paraules);
+        shingles.insert(s.begin(), s.end());
+        v.push_back(paraules);
+    }
+	nShingles = shingles.size();
+	for (auto const &e: shingles)
+		cout << e << ' ';
+	cout << endl;
+
+    Matriu mat = Matriu(N_DOCS, vector<int>(shingles.size()));
+    for (int i = 0; i < N_DOCS; ++i) {
+        mat[i] = calcularColumna(shingles, v[i]);
+    }
+    mat = signaturesMinHash(obtenirVectorA(5, shingles.size()), transposada(mat));
+    return mat;
+}
+
+void calculaMinHashSimilarity ()
+{
+	cout << "Introdueix els dos documents que vols comprar" << endl;
+	int ind1, ind2;
+	cin >> ind1 >> ind2;
+
+	Matriu m = calculaMinHashMatrix();
+	double similitud = jaccard_from_minHashMatrix(m, ind1, ind2);
+	cout << "La similitud entre els dos documents es: " << similitud << endl;
 }
