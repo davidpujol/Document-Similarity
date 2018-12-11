@@ -1,4 +1,3 @@
-
 #include "ObtenirParaules.hh"
 #include "Minhash.hh"
 #include <vector>
@@ -6,10 +5,6 @@
 using namespace std;
 
 #define N_DOCS 20
-
-
-typedef vector<vector<int>> Matriu;
-
 
 Matriu transposada(const Matriu & mat) {
     int cols = mat.size();

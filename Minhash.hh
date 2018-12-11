@@ -1,13 +1,19 @@
-#include <iostream>
+#ifndef MINHASH_H
+#define MINHASH_H
+
 #include <set>
 #include <vector>
+#include "Minhash.cc"
 
-#ifndef ALGORISMIA_MINHASH_H
-#define ALGORISMIA_MINHASH_H
+
 
 #endif //ALGORISMIA_MINHASH_H
 
+typedef vector<vector<int>> Matriu;
+
+Matriu transposada(const Matriu & mat);
+
 void calculSimilitudMinHash();
 
+vector <int> calcularColumna(set <string> shingles, string cjtParaules);
 
-vector <int> calcularColumna(set <string> shingles, string cjtParaules) ;
