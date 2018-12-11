@@ -7,6 +7,10 @@
 
 typedef vector<vector<int>> Matriu;
 
+int randomNumber(int max, int min);
+bool conteValor(vector<int> v, int x);
+vector <int> obtenirVectorA(int n, int numSH);
+
 Matriu transposada(const Matriu & mat);
 
 void calculSimilitudMinHash();
