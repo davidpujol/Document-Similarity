@@ -3,4 +3,4 @@ project(algorismia)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(algorismia main.cpp)
+add_executable(algorismia main.cc)

@@ -1,4 +1,5 @@
-#include "Minhash.h"
+
+#include "ObtenirParaules.hh"
 
 using namespace std;
 
@@ -29,7 +30,7 @@ void calculSimilitudMinHash() {
 	    mat[i] = calcularColumna(shingles,v[i]);
 	}
 
-	
+
 }
 
 
@@ -37,7 +38,10 @@ vector <int> calcularColumna(set <string> shingles, string cjtParaules) {
 	vector <int> col(shingles.size(), 0);
 	int pos = 0;
 	for (auto s: shingles) {
-		if(cjtParaules.find(s) < cjtParaules.size()){ col[pos] = 1;  }
+		if(cjtParaules.find(s) < cjtParaules.size())
+		{
+		    col[pos] = 1;
+		}
 		++pos;
 	}
 	return col;

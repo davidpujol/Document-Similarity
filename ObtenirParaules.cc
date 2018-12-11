@@ -3,8 +3,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include <cstdlib> 
-#include <ObtenirParaules.hh>
+#include <cstdlib>
 
 using namespace std;
 
