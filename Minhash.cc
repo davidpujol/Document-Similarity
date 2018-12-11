@@ -12,9 +12,15 @@ typedef vector<vector<int>> Matriu;
 
 
 Matriu transposada(const Matriu & mat) {
-    for(int i = 0; i < mat.size(); ++i) {
-		for(int j = 0; j < mat.size();++j);
+    int cols = mat.size();
+    int files = mat[0].size();
+    Matriu m = Matriu(files,vector<int>(cols));
+    for(int i = 0; i < cols; ++i) {
+		for(int j = 0; j < files;++j) {
+		    m[j][i] = mat[i][j];
+		}
     }
+    return m;
 }
 
 void calculSimilitudMinHash() {
@@ -31,7 +37,7 @@ void calculSimilitudMinHash() {
 		cout << e << ' ';
 	cout << endl;
 
-	vector<vector<int>> mat = vector< vector<int> >(N_DOCS, vector<int>(shingles.size()));
+	Matriu mat = Matriu(N_DOCS, vector<int>(shingles.size()));
 	for(int i = 0; i < N_DOCS; ++i) {
 	    mat[i] = calcularColumna(shingles,v[i]);
 	}
