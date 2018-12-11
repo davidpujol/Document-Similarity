@@ -31,7 +31,6 @@ void calculSimilitudMinHash() {
         set<string> s = generateKShingles(4, paraules);
         shingles.insert(s.begin(), s.end());
         v.push_back(paraules);
-
     }
 	for (auto const &e: shingles)
 		cout << e << ' ';
@@ -41,7 +40,7 @@ void calculSimilitudMinHash() {
 	for(int i = 0; i < N_DOCS; ++i) {
 	    mat[i] = calcularColumna(shingles,v[i]);
 	}
-
+	mat = transposada(mat);
 
 }
 

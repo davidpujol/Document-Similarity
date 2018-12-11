@@ -1,7 +1,6 @@
 #include <iostream>
 #include <set>
 #include <vector>
-#include "Minhash.cc"
 
 #ifndef ALGORISMIA_MINHASH_H
 #define ALGORISMIA_MINHASH_H
