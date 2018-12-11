@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SimilitudDocuments.iml" filepath="$PROJECT_DIR$/.idea/SimilitudDocuments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/algorismia.iml" filepath="$PROJECT_DIR$/.idea/algorismia.iml" />
     </modules>
   </component>
 </project>
