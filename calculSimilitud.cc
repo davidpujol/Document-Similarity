@@ -1,9 +1,6 @@
-#include <iostream>
-#include <set>
-#include <string>
-#include <vector>
-#include <Jaccard.hh>
-#include <funcionsObtenirParaules.cc>
+
+#include "Jaccard.hh"
+#include "ObtenirParaules.hh"
 
 using namespace std;
 
@@ -45,7 +42,7 @@ void calculaTotesKs () {
         set<string> d1aux = generateKShingles (k, d1);
         set<string> d2aux = generateKShingles (k, d2);
         
-        double similitud = jacardIndex (d1aux, d2aux);
+        double similitud = jaccard_index (d1aux, d2aux);
         cout << "La teva similitud amb la k " << k << " és : " << similitud << endl;
     
     }
@@ -53,7 +50,7 @@ void calculaTotesKs () {
 }
 
 
-void calculSimilitud() {    //inicial
+void calculSimilitud () {    //inicial
     cout << "Introdueix els dos documents que vols comprar" << endl;
     int ind1, ind2;
     cin >> ind1 >> ind2;
@@ -69,7 +66,7 @@ void calculSimilitud() {    //inicial
     set<string> d1aux = generateKShingles (k, d1);
     set<string> d2aux = generateKShingles (k, d2);
     
-    double similitud = jacardIndex (d1aux, d2aux);
+    double similitud = jaccard_index (d1aux, d2aux);
     
     cout << "La teva similitud és : " << similitud << endl;
 }

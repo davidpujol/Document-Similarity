@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include "calculSimilitud.h"
+#include "calculSimilitud.hh"
 #include "ObtenirParaules.hh"
-#include "Minhash.h"
+#include "Minhash.hh"
 #include <set>
 
 #define N_DOCS 20
@@ -22,7 +22,7 @@ int main() {
     }
 
     else {
-        calculSimilitudMinHash();
+        //calculSimilitudMinHash();
     }
 
 

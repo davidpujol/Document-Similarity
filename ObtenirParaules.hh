@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include "ObtenirParaules.cc"
 
 using namespace std;
 
