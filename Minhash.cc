@@ -86,11 +86,10 @@ Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
         vector<int> hi; //tindra tants valors com funcions de hash tinguem
 
         for (auto h: hash) {
-            hi.push_back(funcioHash(h,i));  //calculem el valor de hash per cadascun dels index, entre 0 i mat.size()
+            hi.push_back(funcioHash(h,i));  //calculem elif(c == 1) valor de hash per cadascun dels index, entre 0 i mat.size()
         }
         for(int j = 0; j < mat[0].size(); ++j) {    //per cada columna
-            int c = mat[i][j];
-            if(c == 1) {
+            if(mat[i][j] == 1) {
                 for(int h = 0; h < hi.size(); ++h) {
                     if(hi[h] < sig[h][j]) {
                         sig[h][j] = hi[h];
@@ -98,19 +97,17 @@ Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
                 }
             }
         }
-
-
     }
     return sig;
 }
 
-Matriu calculaMinHashMatrix() {
+Matriu calculaMinHashMatrix(int k, int f) {
     set<string> shingles;
     vector<string> v;    //un vector en el que anem guardant les strings que representen la totalitat dels documents
 
     for (int i = 1; i <= N_DOCS; i++) {
         string paraules = llegirDocumentString(i);
-        set<string> s = generateKShingles(4, paraules);
+        set<string> s = generateKShingles(k, paraules);
         shingles.insert(s.begin(), s.end());
         v.push_back(paraules);
     }
@@ -125,7 +122,7 @@ Matriu calculaMinHashMatrix() {
     for (int i = 0; i < N_DOCS; ++i) {
         mat[i] = calcularColumna(shingles, v[i]);
     }
-    mat = signaturesMinHash(obtenirVectorA(1000, shingles.size()), transposada(mat));
+    mat = signaturesMinHash(obtenirVectorA(f, shingles.size()), transposada(mat));
     cout << "Hem calculat la matriu i ens ha donat" << endl;
 
     for (int i =0; i < mat.size(); ++i) {
@@ -140,11 +137,16 @@ Matriu calculaMinHashMatrix() {
 
 void calculaMinHashSimilarity ()
 {
-	cout << "Introdueix els dos documents que vols comparar" << endl;
+    cout << "Introdueix el el numero k de k-shingles:" << endl;
+    int k,f;
+    cin >> k;
+    cout << "Introdueix el el numero de funcions:" << endl;
+	cin >> f;
+    cout << "Introdueix els dos documents que vols comparar" << endl;
 	int ind1, ind2;
 	cin >> ind1 >> ind2;
 
-	Matriu m = calculaMinHashMatrix();
+	Matriu m = calculaMinHashMatrix(k,f);
 	double similitud = jaccard_from_minHashMatrix(m, ind1, ind2);
 	cout << "La similitud entre els dos documents es: " << similitud << endl;
 }
