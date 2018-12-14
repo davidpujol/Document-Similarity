@@ -1,6 +1,5 @@
 #include "ObtenirParaules.hh"
 #include <vector>
-#include <iostream>
 using namespace std;
 
 #define N_DOCS 20
@@ -15,6 +14,11 @@ int randomNumber(int max, int min) {
 	return rand()%(max-min + 1) + min;
 }
 
+/*
+ * INPUT: v = res sera el vector amb els diferents numeros primers
+ *        x = el nou numero primer que estem comprovant
+ * La funcio comprovara que no hem seleccionat ja aquest numero primer.
+ */
 bool conteValor(vector<int> v, int x) {
 	for(int i = 0; i<v.size(); ++i) {
 		if(v[i] == x)return true;
@@ -37,6 +41,7 @@ vector <int> obtenirVectorA(int n, int numSH) {
 		}
 		res[i] = x;
 	}
+	return res;
 }
 
 
@@ -75,15 +80,17 @@ int funcioHash(int a, int x) {
 }
 
 Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
-    Matriu sig = Matriu(hash.size(), vector<int>(mat[0].size(),INF));
-    cout << sig << endl;
+    Matriu sig = Matriu(hash.size(), vector<int>(mat[0].size(),INF));   //tenim una fila per cada funcio de hash i una columna per document
+
     for(int i = 0; i < mat.size(); ++i) {
-        vector<int> hi;
+        vector<int> hi; //tindra tants valors com funcions de hash tinguem
+
         for (auto h: hash) {
-            hi.push_back(funcioHash(h,i));
+            hi.push_back(funcioHash(h,i));  //calculem el valor de hash per cadascun dels index, entre 0 i mat.size()
         }
-        for(int j = 0; j < mat[0].size(); ++j) {
-            if(mat[i][j] == 1) {
+        for(int j = 0; j < mat[0].size(); ++j) {    //per cada columna
+            int c = mat[i][j];
+            if(c == 1) {
                 for(int h = 0; h < hi.size(); ++h) {
                     if(hi[h] < sig[h][j]) {
                         sig[h][j] = hi[h];
@@ -91,6 +98,8 @@ Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
                 }
             }
         }
+
+
     }
     return sig;
 }
@@ -98,22 +107,34 @@ Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
 Matriu calculaMinHashMatrix() {
     set<string> shingles;
     vector<string> v;    //un vector en el que anem guardant les strings que representen la totalitat dels documents
+
     for (int i = 1; i <= N_DOCS; i++) {
         string paraules = llegirDocumentString(i);
         set<string> s = generateKShingles(4, paraules);
         shingles.insert(s.begin(), s.end());
         v.push_back(paraules);
     }
+
 	nShingles = shingles.size();
-	for (auto const &e: shingles)
+	/*for (auto const &e: shingles)
 		cout << e << ' ';
-	cout << endl;
+	cout<< endl;
+	*/
 
     Matriu mat = Matriu(N_DOCS, vector<int>(shingles.size()));
     for (int i = 0; i < N_DOCS; ++i) {
         mat[i] = calcularColumna(shingles, v[i]);
     }
-    mat = signaturesMinHash(obtenirVectorA(5, shingles.size()), transposada(mat));
+    mat = signaturesMinHash(obtenirVectorA(1000, shingles.size()), transposada(mat));
+    cout << "Hem calculat la matriu i ens ha donat" << endl;
+
+    for (int i =0; i < mat.size(); ++i) {
+        for (int j=0; j < mat[0].size();++j) {
+            cout << mat[i][j] << " ";
+        }
+        cout << endl;
+    }
+
     return mat;
 }
 

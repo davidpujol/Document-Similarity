@@ -13,6 +13,7 @@ vector <int> obtenirVectorA(int n, int numSH);
 
 Matriu transposada(const Matriu & mat);
 
+
 Matriu calculaMinHashMatrix();
 
 vector <int> calcularColumna(set <string> shingles, string cjtParaules);

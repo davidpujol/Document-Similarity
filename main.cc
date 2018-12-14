@@ -16,21 +16,20 @@ int main() {
     cout << "3. Vols trobar una aproximació de la similitud de Jaccard amb minHash" << endl;
 
     int i;
-    cin >> i;
 
-    if (i == 1) {
-        calculSimilitud();
+    cout << "Introdueix la teva opcio:" << endl;
+    while (cin >> i) {
+        if (i == 1) {
+            calculSimilitud();
 
+        } else if (i == 2) {
+            calculaSimilitudTotesKs();
+        } else if (i == 3) {
+            calculaMinHashSimilarity();
+        }
+
+        cout << "Introdueix la teva opcio:" << endl;
     }
-
-    else if (i == 2) {
-        calculaSimilitudTotesKs();
-    }
-
-    else if (i == 3) {
-        calculaMinHashSimilarity();
-    }
-
 
 
 }
