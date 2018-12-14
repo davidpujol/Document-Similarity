@@ -86,7 +86,7 @@ Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
         vector<int> hi; //tindra tants valors com funcions de hash tinguem
 
         for (auto h: hash) {
-            hi.push_back(funcioHash(h,i));  //calculem elif(c == 1) valor de hash per cadascun dels index, entre 0 i mat.size()
+            hi.push_back(funcioHash(h,i));  //calculem el valor de hash per cadascun dels index, entre 0 i mat.size()
         }
         for(int j = 0; j < mat[0].size(); ++j) {    //per cada columna
             if(mat[i][j] == 1) {
