@@ -39,12 +39,12 @@ void calculaSimilitudTotesKs () {
 }
 
 
-void calculSimilitud () {    //inicial
-    cout << "Introdueix els dos documents que vols comprar" << endl;
+void calculaSimilitud () {    //inicial
+    cout << "Introdueix els dos documents que vols comparar:" << endl;
     int ind1, ind2;
     cin >> ind1 >> ind2;
     
-    cout<< "Introdueix el valor k per al calcul dels k-shingles" << endl;
+    cout<< "Introdueix el valor k per al calcul dels k-shingles:" << endl;
     int k;
     cin >> k;
     
@@ -60,4 +60,15 @@ void calculSimilitud () {    //inicial
     double similitud = jaccard_index (d1aux, d2aux);
     
     cout << "La teva similitud és : " << similitud << endl;
+}
+
+void calculaSimilitudTots() {
+    cout<< "Introdueix el valor k per al calcul dels k-shingles:" << endl;
+    int k;
+    cin >> k;
+
+    for (int i = 0; i < N_DOCS; ++i) {
+
+    }
+
 }

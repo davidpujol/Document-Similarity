@@ -1,7 +1,7 @@
 
 #ifndef ALGORISMIA_CALCULSIMILITUD_H
 #define ALGORISMIA_CALCULSIMILITUD_H
-#endif //ALGORISMIA_CALCULSIMILITUD_H
+
 
 
 #include <iostream>
@@ -11,9 +11,12 @@
 
 using namespace std;
 
-set<string> generateKShingles (int k, vector<string> paraules);
+set<string> generateKShingles (int k, string paraules);
 
 void calculaSimilitudTotesKs () ;
 
+void calculaSimilitud ();
 
-void calculSimilitud ();
+void calculaSimilitudTots();
+
+#endif //ALGORISMIA_CALCULSIMILITUD_H
