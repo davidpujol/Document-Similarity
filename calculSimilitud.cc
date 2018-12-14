@@ -69,12 +69,12 @@ void calculaSimilitudTots() {
     cout << "DOCS ";
     for (int i = -1; i < 20; ++i) {
         for (int j = 0; j < 20; ++j) {
-            if(i == -1) cout << " | " << i << " | ";
+            if(i == -1) cout << " | " << j+1 << " |";
             else {
                 if (j == 0) {
-                    cout << " " << j << "   ";
+                    cout << " " << i << "   ";
                 }
-                cout << " |"<<  jaccard_index(generateKShingles(k, llegirDocumentString(i)),generateKShingles(k,llegirDocumentString(j))) << " | ";
+                cout << "|"<<  jaccard_index(generateKShingles(k, llegirDocumentString(i+1)),generateKShingles(k,llegirDocumentString(j+1))) << "|";
             }
         }
         cout << endl;
