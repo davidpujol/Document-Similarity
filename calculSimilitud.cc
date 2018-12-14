@@ -38,6 +38,19 @@ void calculaSimilitudTotesKs () {
     
 }
 
+void calculSimilitudAux (int ind1, int ind2, int k) {
+    string d1 = llegirDocumentString (ind1);
+
+    string d2 = llegirDocumentString (ind2);
+
+    set<string> d1aux = generateKShingles (k, d1);
+
+    set<string> d2aux = generateKShingles (k, d2);
+
+    double similitud = jaccard_index (d1aux, d2aux);
+
+    cout << "La teva similitud és : " << similitud << endl;
+}
 
 void calculSimilitud () {    //inicial
     cout << "Introdueix els dos documents que vols comprar" << endl;
@@ -47,17 +60,7 @@ void calculSimilitud () {    //inicial
     cout<< "Introdueix el valor k per al calcul dels k-shingles" << endl;
     int k;
     cin >> k;
-    
-    
-    string d1 = llegirDocumentString (ind1);
 
-    string d2 = llegirDocumentString (ind2);
-    
-    set<string> d1aux = generateKShingles (k, d1);
+    calculSimilitudAux(ind1, ind2, k);
 
-    set<string> d2aux = generateKShingles (k, d2);
-    
-    double similitud = jaccard_index (d1aux, d2aux);
-    
-    cout << "La teva similitud és : " << similitud << endl;
 }

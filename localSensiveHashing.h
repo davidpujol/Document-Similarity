@@ -8,5 +8,8 @@
 using namespace std;
 
 
+vector<int> getParametres ();
 
-void findCandidates ();
+map<pair<int,int>, double> generateCandidates(Matriu & signatureMatrix);
+
+void showMap (map<pair<int,int>,double> &a);
