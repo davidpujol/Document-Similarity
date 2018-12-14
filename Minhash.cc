@@ -107,7 +107,7 @@ Matriu calculaMinHashMatrix(int k, int f) {
 
     for (int i = 1; i <= N_DOCS; i++) {
         string paraules = llegirDocumentString(i);
-        set<string> s = generateKShingles(4, paraules);
+        set<string> s = generateKShingles(k, paraules);
         shingles.insert(s.begin(), s.end());
         v.push_back(paraules);
     }
@@ -122,7 +122,8 @@ Matriu calculaMinHashMatrix(int k, int f) {
     for (int i = 0; i < N_DOCS; ++i) {
         mat[i] = calcularColumna(shingles, v[i]);
     }
-    mat = signaturesMinHash(obtenirVectorA(5, shingles.size()), transposada(mat));
+
+    mat = signaturesMinHash(obtenirVectorA(f, shingles.size()), transposada(mat));
     cout << "Hem calculat la matriu i ens ha donat" << endl;
 
     for (int i =0; i < mat.size(); ++i) {

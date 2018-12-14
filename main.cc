@@ -2,6 +2,7 @@
 #include <vector>
 #include "calculSimilitud.hh"
 #include "ObtenirParaules.hh"
+#include "localSensiveHashing.hh"
 #include "Minhash.hh"
 #include <set>
 
@@ -31,11 +32,11 @@ void similitudJaccard() {
 }
 
 void similitudJaccardMinHash() {
-
+    calculaMinHashSimilarity();
 }
 
 void similitudJaccardLSH(){
-
+    calculaLocalSensitiveHashing();
 }
 
 int main() {

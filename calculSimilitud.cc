@@ -38,7 +38,7 @@ void calculaSimilitudTotesKs () {
     
 }
 
-void calculSimilitudAux (int ind1, int ind2, int k) {
+double calculSimilitudAux (int ind1, int ind2, int k) {
     string d1 = llegirDocumentString (ind1);
 
     string d2 = llegirDocumentString (ind2);
@@ -50,6 +50,7 @@ void calculSimilitudAux (int ind1, int ind2, int k) {
     double similitud = jaccard_index (d1aux, d2aux);
 
     cout << "La teva similitud és : " << similitud << endl;
+    return similitud;
 }
 
 void calculaSimilitud () {    //inicial

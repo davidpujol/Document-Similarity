@@ -19,4 +19,6 @@ void calculaSimilitud ();
 
 void calculaSimilitudTots();
 
+double calculSimilitudAux (int ind1, int ind2, int k);
+
 #endif //ALGORISMIA_CALCULSIMILITUD_H

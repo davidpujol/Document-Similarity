@@ -8,7 +8,7 @@
 using namespace std;
 
 
-vector<int> getParametres ();
+void calculaLocalSensitiveHashing ();
 
 map<pair<int,int>, double> generateCandidates(Matriu & signatureMatrix);
 
