@@ -52,15 +52,35 @@ void calculSimilitudAux (int ind1, int ind2, int k) {
     cout << "La teva similitud és : " << similitud << endl;
 }
 
-void calculSimilitud () {    //inicial
-    cout << "Introdueix els dos documents que vols comprar" << endl;
+void calculaSimilitud () {    //inicial
+    cout << "Introdueix els dos documents que vols comparar:" << endl;
     int ind1, ind2;
     cin >> ind1 >> ind2;
     
-    cout<< "Introdueix el valor k per al calcul dels k-shingles" << endl;
+    cout<< "Introdueix el valor k per al calcul dels k-shingles:" << endl;
     int k;
     cin >> k;
 
     calculSimilitudAux(ind1, ind2, k);
+
+}
+
+void calculaSimilitudTots() {
+    cout<< "Introdueix el valor k per al calcul dels k-shingles:" << endl;
+    int k;
+    cin >> k;
+    cout << "DOCS ";
+    for (int i = -1; i < 20; ++i) {
+        for (int j = 0; j < 20; ++j) {
+            if(i == -1) cout << " | " << j+1 << " |";
+            else {
+                if (j == 0) {
+                    cout << " " << i << "   ";
+                }
+                cout << "|"<<  jaccard_index(generateKShingles(k, llegirDocumentString(i+1)),generateKShingles(k,llegirDocumentString(j+1))) << "|";
+            }
+        }
+        cout << endl;
+    }
 
 }
