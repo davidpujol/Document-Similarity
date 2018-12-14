@@ -126,7 +126,7 @@ Matriu calculaMinHashMatrix() {
     for (int i = 0; i < N_DOCS; ++i) {
         mat[i] = calcularColumna(shingles, v[i]);
     }
-    mat = signaturesMinHash(obtenirVectorA(1000, shingles.size()), transposada(mat));
+    mat = signaturesMinHash(obtenirVectorA(500, shingles.size()), transposada(mat));
     cout << "Hem calculat la matriu i ens ha donat" << endl;
 
     for (int i =0; i < mat.size(); ++i) {
