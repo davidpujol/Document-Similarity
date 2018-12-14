@@ -1,5 +1,6 @@
 #include "ObtenirParaules.hh"
 #include <vector>
+#include <iostream>
 using namespace std;
 
 #define N_DOCS 20
@@ -75,15 +76,14 @@ int funcioHash(int a, int x) {
 
 Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
     Matriu sig = Matriu(hash.size(), vector<int>(mat[0].size(),INF));
-
+    cout << sig << endl;
     for(int i = 0; i < mat.size(); ++i) {
         vector<int> hi;
         for (auto h: hash) {
             hi.push_back(funcioHash(h,i));
         }
         for(int j = 0; j < mat[0].size(); ++j) {
-            int c = mat[i][j];
-            if(c == 1) {
+            if(mat[i][j] == 1) {
                 for(int h = 0; h < hi.size(); ++h) {
                     if(hi[h] < sig[h][j]) {
                         sig[h][j] = hi[h];
@@ -119,7 +119,7 @@ Matriu calculaMinHashMatrix() {
 
 void calculaMinHashSimilarity ()
 {
-	cout << "Introdueix els dos documents que vols comprar" << endl;
+	cout << "Introdueix els dos documents que vols comparar" << endl;
 	int ind1, ind2;
 	cin >> ind1 >> ind2;
 
