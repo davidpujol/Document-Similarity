@@ -66,9 +66,18 @@ void calculaSimilitudTots() {
     cout<< "Introdueix el valor k per al calcul dels k-shingles:" << endl;
     int k;
     cin >> k;
-
-    for (int i = 0; i < N_DOCS; ++i) {
-
+    cout << "DOCS ";
+    for (int i = -1; i < 20; ++i) {
+        for (int j = 0; j < 20; ++j) {
+            if(i == -1) cout << " | " << i << " | ";
+            else {
+                if (j == 0) {
+                    cout << " " << j << "   ";
+                }
+                cout << " |"<<  jaccard_index(generateKShingles(k, llegirDocumentString(i)),generateKShingles(k,llegirDocumentString(j))) << " | ";
+            }
+        }
+        cout << endl;
     }
 
 }
