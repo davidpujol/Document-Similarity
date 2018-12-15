@@ -115,14 +115,14 @@ Matriu calculaMinHashMatrix(int k, int f) {
     }
 
 	nShingles = shingles.size();
-<<<<<<< HEAD
+//<<<<<<< HEAD
     /*
 	for (auto const &e: shingles)
 		cout << e << ' ';
 	cout<< endl;
     */
-=======
->>>>>>> d427fd1f96ff3c080ea58caefa9af812449c776d
+//=======
+//>>>>>>> d427fd1f96ff3c080ea58caefa9af812449c776d
 
     Matriu mat = Matriu(N_DOCS, vector<int>(shingles.size()));
     for (int i = 0; i < N_DOCS; ++i) {

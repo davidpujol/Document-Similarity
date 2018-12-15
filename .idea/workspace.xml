@@ -12,12 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d20c9859-ea10-44cb-a35f-edc51250b68f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Jaccard.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Jaccard.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Minhash.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Minhash.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Minhash.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Minhash.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculSimilitud.cc" beforeDir="false" afterPath="$PROJECT_DIR$/calculSimilitud.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculSimilitud.hh" beforeDir="false" afterPath="$PROJECT_DIR$/calculSimilitud.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localSensiveHashing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/localSensiveHashing.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Minhash.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="107" column="31" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="31" />
+            <state relative-caret-position="310">
+              <caret line="123" column="2" selection-start-line="123" selection-start-column="2" selection-end-line="123" selection-end-column="2" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -66,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calculSimilitud.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="500">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
@@ -124,10 +120,10 @@
         <option value="$PROJECT_DIR$/Jaccard.cc" />
         <option value="$PROJECT_DIR$/Minhash.hh" />
         <option value="$PROJECT_DIR$/main.cc" />
-        <option value="$PROJECT_DIR$/Minhash.cc" />
         <option value="$PROJECT_DIR$/calculSimilitud.hh" />
         <option value="$PROJECT_DIR$/localSensiveHashing.cpp" />
         <option value="$PROJECT_DIR$/calculSimilitud.cc" />
+        <option value="$PROJECT_DIR$/Minhash.cc" />
       </list>
     </option>
   </component>
@@ -194,12 +190,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544800357658</updated>
-      <workItem from="1544800360815" duration="11066000" />
+      <workItem from="1544800360815" duration="11682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11066000" />
+    <option name="totallyTimeSpent" value="11682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -250,16 +246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Minhash.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="31" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/localSensiveHashing.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -288,8 +274,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calculSimilitud.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="500">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Minhash.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="123" column="2" selection-start-line="123" selection-start-column="2" selection-end-line="123" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
