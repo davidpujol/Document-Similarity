@@ -1,6 +1,9 @@
 
 #include "Jaccard.hh"
 #include "ObtenirParaules.hh"
+#include <iomanip>
+#include <ctime>
+
 
 using namespace std;
 
@@ -29,7 +32,7 @@ void calculaSimilitudTotesKs () {
 
     string d1 = llegirDocumentString (ind1);
     string d2 = llegirDocumentString (ind2);
-    for (int k=1; k < 10; ++k) {
+    for (int k=1; k <= 10; ++k) {
         set<string> d1aux = generateKShingles (k, d1);
         set<string> d2aux = generateKShingles (k, d2);
         double similitud = jaccard_index (d1aux, d2aux);
@@ -84,18 +87,32 @@ void calculaSimilitudTots() {
     cout<< "Introdueix el valor k per al calcul dels k-shingles:" << endl;
     int k;
     cin >> k;
-    cout << "DOCS ";
+
+    unsigned t0, t1;
+    t0 = clock();
+
+    cout << "DOCS";
     for (int i = -1; i < 20; ++i) {
         for (int j = 0; j < 20; ++j) {
-            if(i == -1) cout << " | " << j+1 << " |";
-            else {
+            if(i == -1) {   //la primera fila
+                if (j==0) cout << "  | " << j+1;
+                else if (j/10 == 0) cout << "     | " << j+1;
+                else cout << "    | " << j+1;
+            }
+            else {  //la primera columna
                 if (j == 0) {
-                    cout << " " << i << "   ";
+                    if (i / 10 == 0) cout << i << "    ";
+                    else cout << i << "   ";
                 }
-                cout << "|"<<  jaccard_index(generateKShingles(k, llegirDocumentString(i+1)),generateKShingles(k,llegirDocumentString(j+1))) << "|";
+                double result = jaccard_index(generateKShingles(k, llegirDocumentString(i+1)),generateKShingles(k,llegirDocumentString(j+1)));
+                cout << " | " << std::fixed << std::setprecision(3) << result;
             }
         }
         cout << endl;
     }
+
+    t1 = clock();
+    double time = (double(t1-t0)/CLOCKS_PER_SEC);
+    cout << "El temps d'execucio en calcular totes les similituds per k = "<< k << " és " << time << " segons." << endl;
 
 }

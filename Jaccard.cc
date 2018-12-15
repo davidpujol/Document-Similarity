@@ -4,7 +4,6 @@ using namespace std;
 typedef vector<vector<int> > Matriu;
 
 double jaccard_index(set<string> s1, set<string> s2){
-	int size = s2.size();
 	int unio = s1.size();
 	int interseccio = 0;
 	

@@ -20,4 +20,8 @@ vector <int> calcularColumna(set <string> shingles, string cjtParaules);
 
 void calculaMinHashSimilarity();
 
+void calculaMinHashSimilarityTotesKs ();
+
+void calculaMinHashSimilarityTots ();
+
 #endif
