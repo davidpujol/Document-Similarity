@@ -53,6 +53,20 @@ double calculSimilitudAux (int ind1, int ind2, int k) {
     return similitud;
 }
 
+double calculSimilitudAuxLSH (int ind1, int ind2, int k) {
+    string d1 = llegirDocumentString (ind1);
+
+    string d2 = llegirDocumentString (ind2);
+
+    set<string> d1aux = generateKShingles (k, d1);
+
+    set<string> d2aux = generateKShingles (k, d2);
+
+    double similitud = jaccard_index (d1aux, d2aux);
+
+    return similitud;
+}
+
 void calculaSimilitud () {    //inicial
     cout << "Introdueix els dos documents que vols comparar:" << endl;
     int ind1, ind2;

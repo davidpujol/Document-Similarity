@@ -3,7 +3,7 @@
 
 #include "Minhash.cc"
 
-typedef vector<vector<int>> Matriu;
+typedef vector<vector<int> > Matriu;
 
 int randomNumber(int max, int min);
 

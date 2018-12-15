@@ -5,7 +5,7 @@ using namespace std;
 #define N_DOCS 20
 #define INF 10000000
 
-typedef vector<vector<int>> Matriu;
+typedef vector<vector<int> > Matriu;
 
 int nShingles;
 
@@ -113,10 +113,11 @@ Matriu calculaMinHashMatrix(int k, int f) {
     }
 
 	nShingles = shingles.size();
-	/*for (auto const &e: shingles)
+    /*
+	for (auto const &e: shingles)
 		cout << e << ' ';
 	cout<< endl;
-	*/
+    */
 
     Matriu mat = Matriu(N_DOCS, vector<int>(shingles.size()));
     for (int i = 0; i < N_DOCS; ++i) {
