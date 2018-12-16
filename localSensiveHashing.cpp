@@ -122,8 +122,8 @@ void showMap (map<pair<int,int>,double> &a)
 {
     for (auto it : a)
     {
-        cout << "El pair " << it.first.first << " " << it.first.second << " es similar" << endl;
-        cout << "Té similitud " << it.second << endl;
+        cout << "El document " << it.first.first << " és similar al document " << it.first.second << endl;
+        cout << "La seva similitud és de " << it.second << endl << endl;
     }
 }
 
