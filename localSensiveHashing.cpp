@@ -15,9 +15,10 @@ template<class T> class MyHash;
 
 int numShingles;
 int valorA;
-//vector <int> f; //f[]: (ax + b)mod numShingles
 
-
+/**
+ * Classe que ens permet calcular un hash value a partir de un valor genèric.
+ */
 template<> class MyHash<V> {
     public:
         std::size_t operator()(std::vector<uint32_t> const& vec) const {
@@ -30,6 +31,16 @@ template<> class MyHash<V> {
 };
 
 
+/**
+ * Fa servir l'algorisme de LSH per a calcular els parells que son semblants, i que per tant tenen una similitud major
+ * al threshold calculat. A més a més, calcula la seva similitud, pels parells trobats.
+ * @param signatureMatrix Matriu de signatures minHash
+ * @param band Numero de bands en els que la dividirem
+ * @param r Nombre de funcions de minHash que ha de tenir cada band
+ * @param k Tamany que té cada shingle.
+ * @return Retorna un map de parells de enters que representaran els parells de documents que son semblands,
+ * aixi com un double que representa la seva similitud.
+ */
 map< pair<int,int> , double> generateCandidates (Matriu & signatureMatrix, int band, int r, int k) {
     cout << "Band: " << band <<" / Valor r: " << r << " / Valor k: " << k << endl;
 
@@ -38,8 +49,6 @@ map< pair<int,int> , double> generateCandidates (Matriu & signatureMatrix, int b
     //Genera els candidat per al LSH
 
     hash<int> h; //to hash all rows of all bands.
-    //vector <vector<int> > buckets (band, vector<int> (N_DOCS)); //Matriu on tenim tantes files com bands i tantes columnes com documents (per anar guardant el hash value correponent)
-    //vector <vector<int> > buckets (band, vector<int> (N_DOCS)); //Matriu on tenim tantes files com bands i tantes columnes com documents (per anar guardant el hash value correponent)
     Matriu buckets (band, vector<int> (N_DOCS));
     vector<vector<vector<int> > > memLSH;
     memLSH.resize(band);
@@ -61,17 +70,12 @@ map< pair<int,int> , double> generateCandidates (Matriu & signatureMatrix, int b
 
             //ara ja tenim a 'a' tots els valors de les r files de el document de la columna c.
             //ara calcularem el seu hash value i el ficarem a la seva posicio de buckets.
-            //cout << "Anem a calcular la funcio de hash " << endl;
-            //cout<< "Band: " << b << "  document: " << c;
             unsigned int valor = MyHash<V>()(vectorDunaBand);
-            //cout << valor << endl;
-            buckets[b][c] = valor;    //no funciona el calcul de el hash value !!!!!!!!!!!!!!!!!!! <---------
-            //cout << " - Valor funció de hash mapejant vectors " << buckets[b][c] <<  endl;
+
+            buckets[b][c] = valor;
         }
-        //cout << "b"<<endl;
     }
 
-    //cout << "Hem assignat els buckets" << endl;
     //ens es igual que varios bands continguin candidats que siguin iguals, ja que al final calcularem al similitud de Jaccard per cadascun d'ells per
     //veure si realment el nombre de similars es superior o igual al threshold
     for (int b = 0; b < band; b++) {
@@ -82,22 +86,19 @@ map< pair<int,int> , double> generateCandidates (Matriu & signatureMatrix, int b
                     p.first = c;
                     p.second = k;   //creem el nostre pair amb els dos candidats
                     candidates[p]= 0;   //l'afegim al nostre map
-                    //cout << "Band: " << b << " Doc1: " << c << " Doc2: " << k << "sameVector" << endl;
                 }
             }
         }
     }
 
-    //cout << "Hem calculat les funcions de hash" << endl;
-
     auto it = candidates.begin();    //no tindrem candidats repetits
     map<pair<int,int>,double> elements_similars;
-    //cout << "Band:" << band << " R:" << r << endl;
+
     double base = (1.0/band);
     double exp = (1.0/r);
-    double t = pow(base,exp);
+    double t = pow(base,exp);   // t = pow ((1/band), (1/r))
     cout << "Base:" << base << "  Exp:"<< exp << endl;
-    //double t = pow((1/band),(1/r));
+
     cout << "Valor de t: " << t << endl;
 
     while (it != candidates.end()) {
@@ -105,16 +106,18 @@ map< pair<int,int> , double> generateCandidates (Matriu & signatureMatrix, int b
 
         if (it->second >= t) {
             elements_similars[it->first] = it->second;
-            //cout << "dins de t" << endl;
         }
 
         it++;
     }
-    //cout << "Retornem"<<endl;
     return elements_similars;
 
 }
 
+/**
+ * Els mostra per pantalla.
+ * @param a El map amb els parells candidats i la seva similitud de Jaccard.
+ */
 void showMap (map<pair<int,int>,double> &a)
 {
     for (auto it : a)
@@ -124,6 +127,10 @@ void showMap (map<pair<int,int>,double> &a)
     }
 }
 
+/**
+ * Menu principal on l'usuari introdueix els valors de k, el nombre de bands i de r que vol fer servir per a l'algorisme.
+ * A continuacio es calculen els parells similars i finalment es mostren per pantalla amb la seva similitud concreta.
+ */
 void calculaLocalSensitiveHashing ()
 {
     int bands, r,k;
@@ -137,13 +144,9 @@ void calculaLocalSensitiveHashing ()
     cout << "Introdueix el nombre de files per banda \"r\" : (valor recomanat 5)" << endl;
     cin >> r;
 
-    cout << "Anem a calcular la matriu" << endl;
     Matriu a = calculaMinHashMatrix(k,bands*r);
-    cout << "Anem a calcularLSH" << endl;
 
     //Càlcul Funció Hash
-
-
 
     map<pair<int,int>, double> result = generateCandidates(a, bands, r , k);
     showMap(result);

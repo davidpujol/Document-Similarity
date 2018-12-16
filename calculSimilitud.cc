@@ -7,7 +7,12 @@
 
 using namespace std;
 
-
+/**
+ * Agafa un document en forma de string i el divideix en shingles de tamany k
+ * @param k Tamany dels shingles
+ * @param t Document en forma de string
+ * @return Un set amb tots els k-shingles generats
+ */
 set<string> generateKShingles (int k, string t)
 {
     set<string> shingles;
@@ -25,6 +30,9 @@ set<string> generateKShingles (int k, string t)
     return shingles;
 }
 
+/**
+ * Calcula la similitud de Jaccard de dos documents per tots els valors de k entre 1 i 10
+ */
 void calculaSimilitudTotesKs () {
     cout << "Introdueix els dos documents que vols comprar" << endl;
     int ind1, ind2;
@@ -42,6 +50,14 @@ void calculaSimilitudTotesKs () {
     
 }
 
+/**
+ * Funcio que donat el index dels dos documents i la k, llegeix els documents,
+ * genera els seus k shingles i finalment calcula la similitud de Jaccard.
+ * @param ind1 Index del primer document
+ * @param ind2 Index del segon document
+ * @param k Tamany dels shingles
+ * @return La similitud de Jaccard.
+ */
 double calculSimilitudAux (int ind1, int ind2, int k) {
     string d1 = llegirDocumentString (ind1);
     cout << "El primer document es :" << endl;
@@ -58,6 +74,14 @@ double calculSimilitudAux (int ind1, int ind2, int k) {
     return similitud;
 }
 
+/**
+ * Funcio que donat el index dels dos documents i la k, llegeix els documents,
+ * genera els seus k shingles i finalment calcula la similitud de Jaccard.
+ * @param ind1 Primer index
+ * @param ind2 Segon index
+ * @param k Tamany dels shingles
+ * @return La similitud de Jaccard
+ */
 double calculSimilitudAuxLSH (int ind1, int ind2, int k) {
     string d1 = llegirDocumentString (ind1);
 
@@ -72,6 +96,9 @@ double calculSimilitudAuxLSH (int ind1, int ind2, int k) {
     return similitud;
 }
 
+/**
+ * Calcula la similitud de Jaccard de dos documents per un valord de k introduit per l'usuari.
+ */
 void calculaSimilitud () {    //inicial
     cout << "Introdueix els dos documents que vols comparar:" << endl;
     int ind1, ind2;
@@ -85,6 +112,11 @@ void calculaSimilitud () {    //inicial
 
 }
 
+
+/**
+ * Calcula la similitud de Jaccard de tots els parells possibles entre els 20 documents generats inicialment,
+ * tot fent servir una k introduida per l'usuari.
+ */
 void calculaSimilitudTots() {
     cout<< "Introdueix el valor k per al calcul dels k-shingles:" << endl;
     int k;

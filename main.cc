@@ -10,6 +10,9 @@
 
 using namespace std;
 
+/**
+ * Submenu amb les diferent opcions per a executar el primer algorisme de la similitud de Jaccard.
+ */
 void similitudJaccard() {
     cout << "1. Vols trobar la similitud de Jaccard de dos documents per una K donada" << endl;
     cout << "2. Vols trobar la similitud de Jaccard de dos documents per Ks entre 1 i 10" << endl;
@@ -29,6 +32,9 @@ void similitudJaccard() {
 
 }
 
+/**
+ * Submenu amb les diferents opcions per a executar el segon algorisme de la similiud de Jaccard a partir de signatures MinHash.
+ */
 void similitudJaccardMinHash() {
     cout << "1. Vols trobar una aproximació de la similitud de Jaccard de dos documents per una K donada" << endl;
     cout << "2. Vols trobar una aproximació de la similitud de Jaccard de dos documents per Ks entre 1 i 10" << endl;
@@ -46,6 +52,9 @@ void similitudJaccardMinHash() {
     }
 }
 
+/*
+ * Submenú amb les diferents opcions per executar el tercer algorisme de LSH.
+ */
 void similitudJaccardLSH(){
     calculaLocalSensitiveHashing();
 }

@@ -8,9 +8,13 @@ using namespace std;
 
 typedef vector<vector<int> > Matriu;
 
+int nShingles;  //numero de shingles que tenim
 
-int nShingles;
-
+/**
+ *
+ * @param mat Matriu de la que partim.
+ * @return La matriu transposada.
+ */
 Matriu transposada(const Matriu & mat) {
     int cols = mat.size();
     int files = mat[0].size();
@@ -23,6 +27,12 @@ Matriu transposada(const Matriu & mat) {
     return m;
 }
 
+/**
+ *
+ * @param shingles Set amb la unio de tots els shingles de tots els documents.
+ * @param cjtParaules Document que ara volem comparar
+ * @return Un vector on cada posicio pot tenir 1 o 0. 0 si el document no conte aquell shingle, i 1 altrament.
+ */
 vector <int> calcularColumna(set <string> shingles, string cjtParaules) {
     vector <int> col(shingles.size(), 0);
     int pos = 0;
@@ -36,7 +46,11 @@ vector <int> calcularColumna(set <string> shingles, string cjtParaules) {
     return col;
 }
 
-
+/**
+ * Fa el calcul de una funcio de Universal Hashing i calcula el hash value per un valor x amb aquesta funcio
+ * @param x Valor inicial que volem transformar
+ * @return Hash value.
+ */
 int universalHashing(int x){
     //h(x) = ((ax+b) mod p) mod m
     int a = rand();
@@ -46,12 +60,21 @@ int universalHashing(int x){
     return r % nShingles;
 }
 
-
+/**
+ * Crida una funcio que calculara el hash value pel valor x.
+ * @param x Valor inicial que volem transformar.
+ * @return Hash value
+ */
 int funcioHash(int x) {
     return universalHashing(x);
 }
 
-
+/**
+ * Fa el calcul de la matriu de signatures minHash pels nostres documents.
+ * @param f Nombre de funcions de minHash que volem que faci servir la nostre taula.
+ * @param mat La matriu caracteristica dels nostres documents
+ * @return La matriu de signatures minHash.
+ */
 Matriu signaturesMinHash(int f, const Matriu & mat) {
     Matriu sig = Matriu(f, vector<int>(mat[0].size(),INF));   //tenim una fila per cada funcio de hash i una columna per document
 
@@ -75,7 +98,12 @@ Matriu signaturesMinHash(int f, const Matriu & mat) {
     return sig;
 }
 
-
+/**
+ * Fa el calcul de la matriu de signatures minHash pels nostres documents.
+ * @param k Tamany dels shingles.
+ * @param f Nombre de funcions de minHash que volem usar per a construir la matriu.
+ * @return La matriu de signatures minHash
+ */
 Matriu calculaMinHashMatrix(int k, int f) {
     set<string> shingles;
     vector<string> v;    //un vector en el que anem guardant les strings que representen la totalitat dels documents
@@ -99,7 +127,9 @@ Matriu calculaMinHashMatrix(int k, int f) {
     return mat;
 }
 
-
+/**
+ * Calcula una aproximacio de la similitud de Jaccard per a dos documents donats, per una k donada i un nombre de funcions donat.
+ */
 void calculaMinHashSimilarity ()
 {
     cout << "Introdueix el numero k de k-shingles:" << endl;
@@ -116,7 +146,10 @@ void calculaMinHashSimilarity ()
 	cout << "La similitud entre els dos documents es: " << similitud << endl;
 }
 
-
+/**
+ * Calcula una aproximacio de la similitud de Jaccard per a dos documents donats, per un nombre de funcions donat
+ * i per valors de k que estiguin entre 1 i 10.
+ */
 void calculaMinHashSimilarityTotesKs ()
 {
     int f;
@@ -135,7 +168,10 @@ void calculaMinHashSimilarityTotesKs ()
     }
 }
 
-
+/**
+ * Calcula una aproximacio de la similitud de Jaccard per una k donada i un nombre de funcions donat,
+ * pero per tots els parells de documents possibles donats els 20 documents calculats inicialment.
+ */
 void calculaMinHashSimilarityTots () {
     cout<< "Introdueix el valor k per al calcul dels k-shingles:" << endl;
     int k;

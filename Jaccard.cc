@@ -3,6 +3,12 @@ using namespace std;
 
 typedef vector<vector<int> > Matriu;
 
+/**
+ * Calcula la interseccio i la unio dels dos conjunts i després en fa la divisio per trobar la similitud de Jaccard.
+ * @param s1 Set dels k-shingles del primer document.
+ * @param s2 Set dels k-shingles del segon document.
+ * @return La similitud de jaccard d'aquests.
+ */
 double jaccard_index(set<string> s1, set<string> s2){
 	int unio = s1.size();
 	int interseccio = 0;
@@ -14,12 +20,14 @@ double jaccard_index(set<string> s1, set<string> s2){
 	return double(interseccio) / double(unio);
 }
 
-double jaccard_distance(set<string> s1, set<string> s2){
-	return 1 - jaccard_index(s1,s2);
-}
-
-
-//Retorna la similitud de Jaccard de dos documents a partir de la matriu de signatures minHash.
+/**
+ * Aproxima la similitud de Jaccard comparant les dues columnes dels dos documents i veient quin es el percentatge
+ * de valors entre ells que coincideixen.
+ * @param m La matriu de signatures minHash
+ * @param j1 Index del primer document
+ * @param j2 Index del segon document
+ * @return La seva similitud de Jaccard.
+ */
 double jaccard_from_minHashMatrix (Matriu & m, int j1, int j2)
 {
 	//la matriu comença a 0 mentre que els documents estan numerats desde 1. Per tant els hi hem de restar 1
