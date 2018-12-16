@@ -99,6 +99,7 @@ Matriu signaturesMinHash(int f, const Matriu & mat) {
     return sig;
 }
 
+
 /**
  * Fa el calcul de la matriu de signatures minHash pels nostres documents.
  * @param k Tamany dels shingles.
@@ -128,6 +129,7 @@ Matriu calculaMinHashMatrix(int k, int f) {
     return mat;
 }
 
+
 /**
  * Calcula una aproximacio de la similitud de Jaccard per a dos documents donats, per una k donada i un nombre de funcions donat.
  */
@@ -136,7 +138,7 @@ void calculaMinHashSimilarity ()
     cout << "Introdueix el numero k de k-shingles:" << endl;
     int k,f;
     cin >> k;
-    cout << "Introdueix el numero de funcions de minHash a utilitzar:" << endl;
+    cout << "Introdueix el numero de funcions de minHash a utilitzar: (valor recomanat 500)" << endl;
 	cin >> f;
     cout << "Introdueix els dos documents que vols comparar" << endl;
 	int ind1, ind2;
@@ -208,7 +210,7 @@ void calculaMinHashSimilarityTots () {
 
     t1 = clock();
     double time = (double(t1-t0)/CLOCKS_PER_SEC);
-    cout << "El temps d'execucio en calcular totes les similituds per k = "<< k << " és " << time << " segons." << endl;
+    cout << endl << "El temps d'execucio en calcular totes les similituds per k = "<< k << " és " << time << " segons." << endl;
 
 
 }

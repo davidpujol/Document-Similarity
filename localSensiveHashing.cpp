@@ -102,7 +102,7 @@ map< pair<int,int> , double> generateCandidates (Matriu & signatureMatrix, int b
     cout << "Valor de t: " << t << endl;
 
     while (it != candidates.end()) {
-        it->second = calculSimilitudAuxLSH (it->first.first, it->first.second, k);  //aqui calculem la similitud de dos documents
+        it->second = calculSimilitudAux (it->first.first, it->first.second, k);  //aqui calculem la similitud de dos documents
 
         if (it->second >= t) {
             elements_similars[it->first] = it->second;

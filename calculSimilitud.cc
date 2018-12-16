@@ -72,31 +72,9 @@ double calculSimilitudAux (int ind1, int ind2, int k) {
 
     double similitud = jaccard_index (d1aux, d2aux);
 
-    cout << "La teva similitud és : " << similitud << endl;
     return similitud;
 }
 
-/**
- * Funcio que donat el index dels dos documents i la k, llegeix els documents,
- * genera els seus k shingles i finalment calcula la similitud de Jaccard.
- * @param ind1 Primer index
- * @param ind2 Segon index
- * @param k Tamany dels shingles
- * @return La similitud de Jaccard
- */
-double calculSimilitudAuxLSH (int ind1, int ind2, int k) {
-    string d1 = llegirDocumentString (ind1);
-
-    string d2 = llegirDocumentString (ind2);
-
-    set<string> d1aux = generateKShingles (k, d1);
-
-    set<string> d2aux = generateKShingles (k, d2);
-
-    double similitud = jaccard_index (d1aux, d2aux);
-
-    return similitud;
-}
 
 /**
  * Calcula la similitud de Jaccard de dos documents per un valord de k introduit per l'usuari.
@@ -110,8 +88,8 @@ void calculaSimilitud () {    //inicial
     int k;
     cin >> k;
 
-    calculSimilitudAux(ind1, ind2, k);
-
+    double similitud = calculSimilitudAux(ind1, ind2, k);
+    cout << "La teva similitud és : " << similitud << endl;
 }
 
 
@@ -149,6 +127,6 @@ void calculaSimilitudTots() {
 
     t1 = clock();
     double time = (double(t1-t0)/CLOCKS_PER_SEC);
-    cout << "El temps d'execucio en calcular totes les similituds per k = "<< k << " és " << time << " segons." << endl;
+    cout << endl << "El temps d'execucio en calcular totes les similituds per k = "<< k << " és " << time << " segons." << endl;
 
 }
