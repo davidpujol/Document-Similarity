@@ -6,27 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/Jaccard.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Jaccard.cc
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/Jaccard.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Jaccard.hh
 iostream
 -
 set
 -
 Jaccard.cc
-/Users/rgralma/Documents/projA/SimilitudDocuments/Jaccard.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Jaccard.cc
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/Minhash.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Minhash.cc
 ObtenirParaules.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/ObtenirParaules.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.hh
 vector
 -
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/Minhash.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Minhash.hh
 Minhash.cc
-/Users/rgralma/Documents/projA/SimilitudDocuments/Minhash.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Minhash.cc
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/ObtenirParaules.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.cc
 iostream
 -
 fstream
@@ -40,21 +40,25 @@ algorithm
 cstdlib
 -
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/ObtenirParaules.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.hh
 vector
 -
 string
 -
 ObtenirParaules.cc
-/Users/rgralma/Documents/projA/SimilitudDocuments/ObtenirParaules.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.cc
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/calculSimilitud.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.cc
 Jaccard.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/Jaccard.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Jaccard.hh
 ObtenirParaules.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/ObtenirParaules.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.hh
+iomanip
+-
+ctime
+-
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/calculSimilitud.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.hh
 iostream
 -
 string
@@ -62,39 +66,39 @@ string
 vector
 -
 calculSimilitud.cc
-/Users/rgralma/Documents/projA/SimilitudDocuments/calculSimilitud.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.cc
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/localSensiveHashing.cpp
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/localSensiveHashing.cpp
 vector
 -
 map
 -
 calculSimilitud.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/calculSimilitud.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.hh
 Minhash.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/Minhash.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Minhash.hh
 cmath
 -
 functional
 -
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/localSensiveHashing.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/localSensiveHashing.hh
 localSensiveHashing.cpp
-/Users/rgralma/Documents/projA/SimilitudDocuments/localSensiveHashing.cpp
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/localSensiveHashing.cpp
 
-/Users/rgralma/Documents/projA/SimilitudDocuments/main.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/main.cc
 iostream
 -
 vector
 -
 calculSimilitud.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/calculSimilitud.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.hh
 ObtenirParaules.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/ObtenirParaules.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.hh
 localSensiveHashing.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/localSensiveHashing.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/localSensiveHashing.hh
 Minhash.hh
-/Users/rgralma/Documents/projA/SimilitudDocuments/Minhash.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Minhash.hh
 set
 -
 

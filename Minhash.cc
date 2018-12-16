@@ -8,43 +8,8 @@ using namespace std;
 
 typedef vector<vector<int> > Matriu;
 
+
 int nShingles;
-
-
-int randomNumber(int max, int min) {
-	return rand()%(max-min + 1) + min;
-}
-
-/*
- * INPUT: v = res sera el vector amb els diferents numeros primers
- *        x = el nou numero primer que estem comprovant
- * La funcio comprovara que no hem seleccionat ja aquest numero primer.
- */
-bool conteValor(vector<int> v, int x) {
-	for(int i = 0; i<v.size(); ++i) {
-		if(v[i] == x)return true;
-	}
-	return false;
-}
-
-/*
-	INPUT: n= num de funcions que es vol
-	       numSH = num de shingles
-*/
-vector <int> obtenirVectorA(int n, int numSH) {
-	vector <int> res(n, -1);
-	for (int i = 0; i < n; ++i) {
-		bool acabat = false;
-		int x;
-		while (not acabat) {
-			x = randomNumber(numSH, 0);
-			if((x % 2 != 0) && (not conteValor(res, x))) acabat = true;
-		}
-		res[i] = x;
-	}
-	return res;
-}
-
 
 Matriu transposada(const Matriu & mat) {
     int cols = mat.size();
@@ -71,26 +36,34 @@ vector <int> calcularColumna(set <string> shingles, string cjtParaules) {
     return col;
 }
 
-int universalHashing(int a, int x, int b, int m){
-    //h(x) = (ax+b) mod n
-    return (a*x+b)%m;
+
+int universalHashing(int x){
+    //h(x) = ((ax+b) mod p) mod m
+    int a = rand();
+    int b = rand();
+    long r = a*x + b;
+    r = r % 8713;   //modul per un primer >= m
+    return r % nShingles;
 }
 
-int funcioHash(int a, int x) {
-    return universalHashing(a, x, 1, nShingles);
+
+int funcioHash(int x) {
+    return universalHashing(x);
 }
 
-Matriu signaturesMinHash(const vector<int> hash, const Matriu & mat) {
-    Matriu sig = Matriu(hash.size(), vector<int>(mat[0].size(),INF));   //tenim una fila per cada funcio de hash i una columna per document
 
-    for(int i = 0; i < mat.size(); ++i) {
+Matriu signaturesMinHash(int f, const Matriu & mat) {
+    Matriu sig = Matriu(f, vector<int>(mat[0].size(),INF));   //tenim una fila per cada funcio de hash i una columna per document
+
+    for(int i = 1; i <= mat.size(); ++i) {
         vector<int> hi; //tindra tants valors com funcions de hash tinguem
 
-        for (auto h: hash) {
-            hi.push_back(funcioHash(h,i));  //calculem el valor de hash per cadascun dels index, entre 0 i mat.size()
+        for (int j=0; j < f; ++j){
+            hi.push_back(funcioHash(i));  //calculem el valor de hash per cadascun dels index, entre 1 i mat.size()
         }
+
         for(int j = 0; j < mat[0].size(); ++j) {    //per cada columna
-            if(mat[i][j] == 1) {
+            if(mat[i-1][j] == 1) {
                 for(int h = 0; h < hi.size(); ++h) {
                     if(hi[h] < sig[h][j]) {
                         sig[h][j] = hi[h];
@@ -115,29 +88,13 @@ Matriu calculaMinHashMatrix(int k, int f) {
     }
 
 	nShingles = shingles.size();
-//<<<<<<< HEAD
-    /*
-	for (auto const &e: shingles)
-		cout << e << ' ';
-	cout<< endl;
-    */
-//=======
-//>>>>>>> d427fd1f96ff3c080ea58caefa9af812449c776d
 
     Matriu mat = Matriu(N_DOCS, vector<int>(shingles.size()));
     for (int i = 0; i < N_DOCS; ++i) {
         mat[i] = calcularColumna(shingles, v[i]);
     }
 
-    mat = signaturesMinHash(obtenirVectorA(f, shingles.size()), transposada(mat));
-    /*cout << "Hem calculat la matriu i ens ha donat" << endl;
-
-    for (int i =0; i < mat.size(); ++i) {
-        for (int j=0; j < mat[0].size();++j) {
-            cout << mat[i][j] << " ";
-        }
-        cout << endl;
-    }*/
+    mat = signaturesMinHash(f, transposada(mat));
 
     return mat;
 }
@@ -170,11 +127,11 @@ void calculaMinHashSimilarityTotesKs ()
     int ind1, ind2;
     cin >> ind1 >> ind2;
 
-    for (int i=1; i <= 10; ++i)
+    for (int k=1; k <= 10; ++k)
     {
-        Matriu m = calculaMinHashMatrix (i, f);
+        Matriu m = calculaMinHashMatrix (k, f);
         double similitud = jaccard_from_minHashMatrix (m, ind1, ind2);
-        cout << "La similitud entre els dos documents amb k = " << i << " es: " << similitud << endl;
+        cout << "La similitud entre els dos documents amb k = " << k << " es: " << similitud << endl;
     }
 }
 

@@ -31,6 +31,7 @@ void calculaSimilitudTotesKs () {
     cin >> ind1 >> ind2;
 
     string d1 = llegirDocumentString (ind1);
+
     string d2 = llegirDocumentString (ind2);
     for (int k=1; k <= 10; ++k) {
         set<string> d1aux = generateKShingles (k, d1);
@@ -43,7 +44,8 @@ void calculaSimilitudTotesKs () {
 
 double calculSimilitudAux (int ind1, int ind2, int k) {
     string d1 = llegirDocumentString (ind1);
-
+    cout << "El primer document es :" << endl;
+    cout << d1 << endl;
     string d2 = llegirDocumentString (ind2);
 
     set<string> d1aux = generateKShingles (k, d1);

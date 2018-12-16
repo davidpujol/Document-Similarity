@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/rgralma/Documents/projA/SimilitudDocuments/main.cc" "/Users/rgralma/Documents/projA/SimilitudDocuments/cmake-build-debug/CMakeFiles/algorismia.dir/main.cc.o"
+  "/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/main.cc" "/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/cmake-build-debug/CMakeFiles/algorismia.dir/main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
