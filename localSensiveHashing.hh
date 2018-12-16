@@ -3,7 +3,7 @@
 
 #endif //ALGORISMIA_LOCALSENSIVEHASHING_H
 
-#include "localSensiveHashing.cc"
+#include "localSensiveHashing.cpp"
 
 using namespace std;
 

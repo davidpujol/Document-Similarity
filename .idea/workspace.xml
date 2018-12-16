@@ -12,8 +12,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d20c9859-ea10-44cb-a35f-edc51250b68f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Minhash.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Minhash.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localSensiveHashing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/localSensiveHashing.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/creafitxers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer12.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer13.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer14.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer15.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer16.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer17.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer18.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer19.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer19.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer20.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer20.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/fitxer9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/fitxer9.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generadorDocuments/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generadorDocuments/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localSensiveHashing.cc" beforeDir="false" afterPath="$PROJECT_DIR$/localSensiveHashing.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/localSensiveHashing.hh" beforeDir="false" afterPath="$PROJECT_DIR$/localSensiveHashing.hh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -30,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/calculSimilitud.cc">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="226">
-              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding>
                 <element signature="e#1#22#0" expanded="true" />
               </folding>
@@ -41,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Minhash.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+            <state relative-caret-position="382">
+              <caret line="201" column="1" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
               <folding>
                 <element signature="e#197#280#0" />
                 <element signature="e#552#806#0" />
@@ -52,11 +74,34 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generadorDocuments/input.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7485">
+              <caret line="499" column="7" selection-start-line="499" selection-start-column="7" selection-end-line="499" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="55" column="77" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generadorDocuments/fitxer3.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generadorDocuments/creafitxers.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="153">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -105,12 +150,14 @@
         <option value="$PROJECT_DIR$/calculSimilitud.cc" />
         <option value="$PROJECT_DIR$/calculSimilitud.hh" />
         <option value="$PROJECT_DIR$/Minhash.cc" />
+        <option value="$PROJECT_DIR$/generadorDocuments/input.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="12" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
+    <option name="width" value="1104" />
     <option name="height" value="712" />
   </component>
   <component name="ProjectView">
@@ -142,6 +189,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/generadorDocuments" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -177,7 +227,7 @@
       <updated>1544800357658</updated>
       <workItem from="1544800360815" duration="11682000" />
       <workItem from="1544953011459" duration="5462000" />
-      <workItem from="1544969480569" duration="434000" />
+      <workItem from="1544969480569" duration="2251000" />
     </task>
     <task id="LOCAL-00001" summary="Ja funciona el segon exercici.">
       <created>1544955023169</created>
@@ -207,22 +257,29 @@
       <option name="project" value="LOCAL" />
       <updated>1544969505100</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="He millorat el mostrat de l'ultim algorisme">
+      <created>1544970036605</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544970036605</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17578000" />
+    <option name="totallyTimeSpent" value="19395000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="712" extended-state="0" />
+    <frame x="12" y="23" width="1104" height="712" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18497577" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21563089" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.90806454" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.7451613" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -264,13 +321,6 @@
     <entry file="file://$PROJECT_DIR$/generadorDocuments/Makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="55" column="77" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jaccard.hh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -305,7 +355,7 @@
     <entry file="file://$PROJECT_DIR$/localSensiveHashing.hh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/localSensiveHashing.cc">
+    <entry file="file://$PROJECT_DIR$/localSensiveHashing.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
@@ -337,7 +387,7 @@
     <entry file="file://$PROJECT_DIR$/calculSimilitud.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
           </folding>
@@ -351,10 +401,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generadorDocuments/creafitxers.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Minhash.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+        <state relative-caret-position="382">
+          <caret line="201" column="1" selection-start-line="201" selection-start-column="1" selection-end-line="201" selection-end-column="1" />
           <folding>
             <element signature="e#197#280#0" />
             <element signature="e#552#806#0" />
@@ -363,13 +423,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generadorDocuments/creafitxers.cc">
+    <entry file="file://$PROJECT_DIR$/generadorDocuments/fitxer3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generadorDocuments/fitxer13.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-6473" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generadorDocuments/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7485">
+          <caret line="499" column="7" selection-start-line="499" selection-start-column="7" selection-end-line="499" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="55" column="77" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
         </state>
       </provider>
     </entry>
