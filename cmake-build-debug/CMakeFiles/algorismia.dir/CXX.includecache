@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Jaccard.cc
+iostream
+-
+set
+-
+
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Jaccard.hh
+Jaccard.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Jaccard.cc
+
 /Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Minhash.cc
 ObtenirParaules.hh
 /Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.hh
@@ -34,7 +44,27 @@ cstdlib
 ObtenirParaules.cc
 /Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.cc
 
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.cc
+Jaccard.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/Jaccard.hh
+ObtenirParaules.hh
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/ObtenirParaules.hh
+iomanip
+-
+ctime
+-
+vector
+-
+string
+-
+iostream
+-
+calculSimilitud.hh
 /Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.hh
+
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.hh
+calculSimilitud.cc
+/Users/david/Documents/UPC/Quatri5/SimilitudDocuments/calculSimilitud.cc
 
 /Users/david/Documents/UPC/Quatri5/SimilitudDocuments/localSensiveHashing.cpp
 vector

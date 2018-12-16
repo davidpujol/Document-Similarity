@@ -137,8 +137,8 @@ void calculaSimilitudTots() {
             }
             else {  //la primera columna
                 if (j == 0) {
-                    if (i / 10 == 0) cout << i << "    ";
-                    else cout << i << "   ";
+                    if ((i+1) / 10 == 0) cout << i+1 << "    ";
+                    else cout << i+1 << "   ";
                 }
                 double result = jaccard_index(generateKShingles(k, llegirDocumentString(i+1)),generateKShingles(k,llegirDocumentString(j+1)));
                 cout << " | " << std::fixed << std::setprecision(3) << result;
