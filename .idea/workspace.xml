@@ -12,11 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d20c9859-ea10-44cb-a35f-edc51250b68f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Jaccard.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Jaccard.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jaccard.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Jaccard.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ObtenirParaules.hh" beforeDir="false" afterPath="$PROJECT_DIR$/ObtenirParaules.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculSimilitud.cc" beforeDir="false" afterPath="$PROJECT_DIR$/calculSimilitud.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculSimilitud.hh" beforeDir="false" afterPath="$PROJECT_DIR$/calculSimilitud.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Minhash.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Minhash.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localSensiveHashing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/localSensiveHashing.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localSensiveHashing.hh" beforeDir="false" afterPath="$PROJECT_DIR$/localSensiveHashing.hh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +25,46 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/calculSimilitud.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <folding>
+                <element signature="e#1#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Minhash.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+              <folding>
+                <element signature="e#197#280#0" />
+                <element signature="e#552#806#0" />
+                <element signature="e#1108#1495#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/generadorDocuments/creafitxers.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -60,7 +97,6 @@
         <option value="$PROJECT_DIR$/cmake-build-debug/Makefile" />
         <option value="$PROJECT_DIR$/Minhash.hh" />
         <option value="$PROJECT_DIR$/main.cc" />
-        <option value="$PROJECT_DIR$/Minhash.cc" />
         <option value="$PROJECT_DIR$/ObtenirParaules.cc" />
         <option value="$PROJECT_DIR$/localSensiveHashing.cpp" />
         <option value="$PROJECT_DIR$/Jaccard.cc" />
@@ -68,10 +104,11 @@
         <option value="$PROJECT_DIR$/ObtenirParaules.hh" />
         <option value="$PROJECT_DIR$/calculSimilitud.cc" />
         <option value="$PROJECT_DIR$/calculSimilitud.hh" />
+        <option value="$PROJECT_DIR$/Minhash.cc" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="712" />
@@ -81,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -88,11 +126,15 @@
               <item name="algorismia" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimilitudDocuments" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="algorismia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimilitudDocuments" type="462c0819:PsiDirectoryNode" />
+              <item name="generadorDocuments" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -135,6 +177,7 @@
       <updated>1544800357658</updated>
       <workItem from="1544800360815" duration="11682000" />
       <workItem from="1544953011459" duration="5462000" />
+      <workItem from="1544969480569" duration="434000" />
     </task>
     <task id="LOCAL-00001" summary="Ja funciona el segon exercici.">
       <created>1544955023169</created>
@@ -157,16 +200,24 @@
       <option name="project" value="LOCAL" />
       <updated>1544961507010</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="He millorat el mostrat de l'ultim algorisme">
+      <created>1544969505099</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544969505100</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17144000" />
+    <option name="totallyTimeSpent" value="17578000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="712" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="712" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1825525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18497577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -182,11 +233,11 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.40145984" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32903227" />
       <window_info anchor="bottom" id="CMake" order="12" />
-      <window_info anchor="right" x="0" y="0" width="270" height="512" id="Documentation" side_tool="true" weight="0.32956383" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" x="0" y="0" width="270" height="512" id="Documentation" order="4" side_tool="true" weight="0.32956383" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,13 +254,6 @@
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="82" column="181" selection-start-line="82" selection-start-column="181" selection-end-line="82" selection-end-column="181" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -224,16 +268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
           <caret line="55" column="77" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generadorDocuments/creafitxers.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="72" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -254,13 +288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Minhash.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2535">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Minhash.hh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -278,7 +305,7 @@
     <entry file="file://$PROJECT_DIR$/localSensiveHashing.hh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/localSensiveHashing.cpp">
+    <entry file="file://$PROJECT_DIR$/localSensiveHashing.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
@@ -309,10 +336,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calculSimilitud.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="226">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
             <element signature="e#1#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="82" column="181" selection-start-line="82" selection-start-column="181" selection-end-line="82" selection-end-column="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Minhash.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="54" column="27" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
+          <folding>
+            <element signature="e#197#280#0" />
+            <element signature="e#552#806#0" />
+            <element signature="e#1108#1495#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generadorDocuments/creafitxers.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>

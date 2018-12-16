@@ -10,6 +10,7 @@ typedef vector<vector<int> > Matriu;
 
 int nShingles;  //numero de shingles que tenim
 
+
 /**
  *
  * @param mat Matriu de la que partim.
