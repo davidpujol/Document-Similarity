@@ -1,8 +1,6 @@
 #ifndef OBTENIRPARAULES_HH
 #define OBTENIRPARAULES_HH
 
-#include <vector>
-#include <string>
 #include "ObtenirParaules.cc"
 
 using namespace std;

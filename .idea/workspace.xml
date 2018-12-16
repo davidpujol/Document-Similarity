@@ -12,9 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d20c9859-ea10-44cb-a35f-edc51250b68f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/algorismia" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/algorismia" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/localSensiveHashing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/localSensiveHashing.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jaccard.cc" beforeDir="false" afterPath="$PROJECT_DIR$/Jaccard.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jaccard.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Jaccard.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObtenirParaules.hh" beforeDir="false" afterPath="$PROJECT_DIR$/ObtenirParaules.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculSimilitud.cc" beforeDir="false" afterPath="$PROJECT_DIR$/calculSimilitud.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculSimilitud.hh" beforeDir="false" afterPath="$PROJECT_DIR$/calculSimilitud.hh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,17 +27,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/localSensiveHashing.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="905">
-              <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -66,16 +58,16 @@
       <list>
         <option value="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
         <option value="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-        <option value="$PROJECT_DIR$/ObtenirParaules.hh" />
         <option value="$PROJECT_DIR$/Minhash.hh" />
-        <option value="$PROJECT_DIR$/calculSimilitud.hh" />
-        <option value="$PROJECT_DIR$/Jaccard.hh" />
-        <option value="$PROJECT_DIR$/calculSimilitud.cc" />
-        <option value="$PROJECT_DIR$/Jaccard.cc" />
         <option value="$PROJECT_DIR$/main.cc" />
         <option value="$PROJECT_DIR$/Minhash.cc" />
         <option value="$PROJECT_DIR$/ObtenirParaules.cc" />
         <option value="$PROJECT_DIR$/localSensiveHashing.cpp" />
+        <option value="$PROJECT_DIR$/Jaccard.cc" />
+        <option value="$PROJECT_DIR$/Jaccard.hh" />
+        <option value="$PROJECT_DIR$/ObtenirParaules.hh" />
+        <option value="$PROJECT_DIR$/calculSimilitud.cc" />
+        <option value="$PROJECT_DIR$/calculSimilitud.hh" />
       </list>
     </option>
   </component>
@@ -142,7 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1544800357658</updated>
       <workItem from="1544800360815" duration="11682000" />
-      <workItem from="1544953011459" duration="4403000" />
+      <workItem from="1544953011459" duration="5462000" />
     </task>
     <task id="LOCAL-00001" summary="Ja funciona el segon exercici.">
       <created>1544955023169</created>
@@ -158,22 +150,28 @@
       <option name="project" value="LOCAL" />
       <updated>1544956663664</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="He millorat el mostrat de l'ultim algorisme">
+      <created>1544961507010</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1544961507010</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16085000" />
+    <option name="totallyTimeSpent" value="17144000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="712" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1825525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1825525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32903227" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.58709675" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.90806454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -184,6 +182,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.40145984" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32903227" />
       <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="right" x="0" y="0" width="270" height="512" id="Documentation" side_tool="true" weight="0.32956383" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -196,7 +195,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ja funciona el segon exercici." />
     <MESSAGE value="He afegit la documentació al codi." />
-    <option name="LAST_COMMIT_MESSAGE" value="He afegit la documentació al codi." />
+    <MESSAGE value="He millorat el mostrat de l'ultim algorisme" />
+    <option name="LAST_COMMIT_MESSAGE" value="He millorat el mostrat de l'ultim algorisme" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
@@ -220,72 +220,10 @@
     <entry file="file://$PROJECT_DIR$/generadorDocuments/Makefile">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Minhash.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ObtenirParaules.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calculSimilitud.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calculSimilitud.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jaccard.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Jaccard.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
           <caret line="55" column="77" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Minhash.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
-          <folding>
-            <element signature="e#5040#5177#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ObtenirParaules.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -299,10 +237,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Jaccard.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jaccard.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#1#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Minhash.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2535">
+          <caret line="170" selection-start-line="170" selection-end-line="170" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Minhash.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObtenirParaules.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/localSensiveHashing.hh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/localSensiveHashing.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="905">
-          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding>
+            <element signature="e#274#359#0" />
+            <element signature="e#672#1269#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObtenirParaules.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#138#274#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculSimilitud.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/calculSimilitud.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#1#22#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -3,7 +3,10 @@
 #include "ObtenirParaules.hh"
 #include <iomanip>
 #include <ctime>
-
+#include <vector>
+#include <string>
+#include <iostream>
+#include "calculSimilitud.hh"
 
 using namespace std;
 
@@ -60,8 +63,7 @@ void calculaSimilitudTotesKs () {
  */
 double calculSimilitudAux (int ind1, int ind2, int k) {
     string d1 = llegirDocumentString (ind1);
-    cout << "El primer document es :" << endl;
-    cout << d1 << endl;
+
     string d2 = llegirDocumentString (ind2);
 
     set<string> d1aux = generateKShingles (k, d1);
